@@ -8,3 +8,7 @@ target_include_directories(core INTERFACE src)
 
 add_executable(tests tests/test_core.cpp)
 target_link_libraries(tests core)
+
+find_package(SFML 3 REQUIRED COMPONENTS Graphics)
+add_executable(app src/main.cpp)
+target_link_libraries(app PRIVATE core SFML::Graphics)

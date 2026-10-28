@@ -3,6 +3,8 @@
 #include <iostream>
 #include "algo/Bfs.h"
 #include "algo/Dfs.h"
+#include <random>
+#include "algo/Dijkstra.h"
 
 bool validPath(const Grid& g, const SearchResult& r) {
     if (r.path.empty() || r.path.front() != g.start || r.path.back() != g.end) return false;
